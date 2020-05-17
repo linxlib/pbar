@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/clt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/colorstring" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/pb" vcs="Git" />
+  </component>
+</project>
