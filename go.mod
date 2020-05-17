@@ -1,6 +1,6 @@
 module github.com/linxlib/pbar
 
-go 1.14
+go 1.13
 
 require (
 	github.com/VividCortex/ewma v1.1.1
