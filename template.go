@@ -32,7 +32,8 @@ var (
 	// Example: 'Prefix 20/100 [-->______] 20% 1 p/s ETA 1m Suffix'
 	Default ProgressBarTemplate = `{{string . "prefix"}}{{counters . }} {{bar . }} {{percent . }} {{speed . }}{{string . "suffix"}}`
 
-	Building = ProgressBarTemplate(Dots + ` {{cyan "building"}} {{bar .}} {{counters . "%.3s/%s"}} ` + Result)
+	Building        = ProgressBarTemplate(Dots + ` {{cyan "building"}} {{bar .}} {{counters . "%.3s/%s"}} ` + Result)
+	InkWalkTemplate = ProgressBarTemplate(`{{string . "doing" | cyan}}. [` + Wheel + Result + `]`)
 )
 
 // ProgressBarTemplate that template string

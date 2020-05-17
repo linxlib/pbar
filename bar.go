@@ -131,7 +131,7 @@ func (pb *Bar) Total() int64 {
 // SetTotal sets the total bar value
 func (pb *Bar) SetTotal(value int64) *Bar {
 	atomic.StoreInt64(&pb.total, value)
-	if pb.current >= pb.total {
+	if pb.current >= pb.total && pb.total != -1 {
 		pb.Finish()
 	}
 	return pb
@@ -140,7 +140,7 @@ func (pb *Bar) SetTotal(value int64) *Bar {
 // SetCurrent sets the current bar value
 func (pb *Bar) SetCurrent(value int64) *Bar {
 	atomic.StoreInt64(&pb.current, value)
-	if pb.current >= pb.total {
+	if pb.current >= pb.total && pb.total != -1 {
 		pb.Finish()
 	}
 	return pb
@@ -154,7 +154,7 @@ func (pb *Bar) Current() int64 {
 // Add adding given int64 value to bar value
 func (pb *Bar) Add64(value int64) *Bar {
 	atomic.AddInt64(&pb.current, value)
-	if pb.current >= pb.total {
+	if pb.current >= pb.total && pb.total != -1 {
 		pb.Finish()
 	}
 	return pb
